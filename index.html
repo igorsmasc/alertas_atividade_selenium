@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Alertas</title>
+    <!-- Inclusão do CSS do Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        /* Estilos personalizados */
+        .custom-alert {
+            background-color: #f8d7da;
+            border-color: #f5c6cb;
+            color: #721c24;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="text-center mb-5">Praticando Alertas</h1>
+    <div class="container mt-5">
+        <!-- Alerta simples -->
+        <button class="btn btn-primary" onclick="alert('Este é um alerta simples!')">Alerta Simples</button>
+        <hr>
+        <!-- Alerta de confirmação -->
+        <button class="btn btn-primary"
+            onclick="if(confirm('Tem certeza que deseja excluir este item?')) { alert('Item excluído com sucesso!') } else { alert('A exclusão foi cancelada.') }">Alerta
+            de Confirmação</button>
+        <hr>
+        <!-- Alerta de entrada -->
+        <button class="btn btn-primary"
+            onclick="let nome = prompt('Por favor, insira seu nome:'); if(nome != null && nome != '') { alert('Bem-vindo, ' + nome + '!') } else { alert('Você não inseriu um nome válido.') }">Alerta
+            de Entrada</button>
+        <hr>
+        <!-- Alerta personalizado com CSS -->
+        <div class="alert custom-alert" role="alert">
+            Este é um alerta personalizado com CSS!
+        </div>
+    </div>
+    <footer class="footer mt-auto py-3">
+        <div class="container text-center">
+            <span class="text-muted">&copy; 2023 <a href="https://www.linkedin.com/in/igor-mascarenhas/"
+                    target="_blank">Professor Igor Mascarenhas</a>. Código para aulas de automação.</span>
+        </div>
+    </footer>
+</body>
+
+</html>
